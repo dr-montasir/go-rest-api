@@ -1,0 +1,136 @@
+{
+	"info": {
+		"name": "go-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "go-mock-rest-api",
+			"item": [
+				{
+					"name": "/ Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1400/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1400",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ Get Single Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1400/api/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1400",
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ Create a New Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Mobile App Development\",\r\n    \"title\": \"Build Mobile Apps with React Native\",\r\n    \"instructor\": {\"firstname\": \"Valentin\", \"lastname\": \"Shergin\"},\r\n    \"cousreDuration\": \"6 months\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1400/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1400",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1400/api/courses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1400",
+							"path": [
+								"api",
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Web Development\",\r\n    \"title\": \"Build Web Apps with Go Language\",\r\n    \"instructor\": {\r\n        \"firstName\": \"Robert\",\r\n        \"lastName\": \"Griesemer\"\r\n    },\r\n\"cousreDuration\": \"4 months\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1400/api/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1400",
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
